@@ -32,12 +32,19 @@
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html('Primary Menu'); ?></button>
 					<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu'));?>
-					<form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
-    <div><label class="screen-reader-text" for="s">Search for:</label>
-        <input type="text" value="" name="s" id="s" />
-        <input type="submit" id="searchsubmit" value="Search" />
-    </div>
-</form>
+					<div class="header-search">
+					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+					<fieldset>
+							<div class="icon-search">
+								<i class="fa fa-search"></i>
+							</div>
+							<span class="screen-reader-text"><?php echo esc_html( 'Type and Hit Enter...' ); ?></span>
+						<label>
+							<input type="search" class="search-field" placeholder="Type and Hit Enter ..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+						</label>
+					</fieldset>
+				</form>
+				</div>
 				</div>
 				</nav><!-- #site-navigation -->
 			</div>
