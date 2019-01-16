@@ -3,71 +3,360 @@
 --------------------------------------------------------------*/
 
 html {
-  box-sizing: border-box;
-  @include font-size(1);
+    box-sizing: border-box;
+    @include font-size(1);
 }
 
 *,
 *:before,
 *:after {
-  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  box-sizing: inherit;
+    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    box-sizing: inherit;
 }
 
 body {
-  background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+    background: $color__background-body;
+    /* Fallback for when there is no custom background color defined. */
+    line-height: 1.75;
+    font-family: 'Merriweather', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Novecento Sans', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.25;
+}
+
+a {
+    text-decoration: none;
+    &:visited {
+        color: $black_text;
+    }
 }
 
 blockquote,
 q {
-  quotes: '' '';
-
-  &:before,
-  &:after {
-    content: '';
-  }
+    quotes: '' '';
+    &:before,
+    &:after {
+        content: '';
+    }
 }
 
 hr {
-  background-color: $color__background-hr;
-  border: 0;
-  height: 1px;
-  margin-bottom: $base__space-unit;
+    background-color: $color__background-hr;
+    border: 0;
+    height: 1px;
+    margin-bottom: $base__space-unit;
 }
 
 ul,
 ol {
-  margin: 0 0 $base__space-unit ($base__space-unit * 2);
+    margin: 0 0 $base__space-unit ($base__space-unit * 2);
 }
 
 ul {
-  list-style: disc;
+    list-style: disc;
 }
 
 ol {
-  list-style: decimal;
+    list-style: decimal;
 }
 
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: $base__space-unit;
+li>ul,
+li>ol {
+    margin-bottom: 0;
+    margin-left: $base__space-unit;
 }
 
 dt {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 dd {
-  margin: 0 $base__space-unit $base__space-unit;
+    margin: 0 $base__space-unit $base__space-unit;
 }
 
 img {
-  height: auto; /* Make sure images are scaled correctly. */
-  max-width: 100%; /* Adhere to container width. */
+    height: auto;
+    /* Make sure images are scaled correctly. */
+    max-width: 100%;
+    /* Adhere to container width. */
 }
 
 table {
-  margin: 0 0 $base__space-unit;
-  width: 100%;
+    margin: 0 0 $base__space-unit;
+    width: 100%;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.heading_2 {
+    padding: 30px 0;
+    font-size: 3rem;
+    font-weight: initial;
+    text-align: center;
+}
+
+//button
+.like-icons {
+    button {
+        background: $white_text;
+        color: $black_text;
+        border: $black_text 1px solid;
+        border-radius: 0;
+        padding: 15px 30px;
+        font-size: .8rem;
+        &:hover {
+            @include hoverGreen;
+            box-shadow: none;
+            text-shadow: none;
+        }
+    }
+}
+
+
+//FOOTER
+.footer {
+    height: 300px;
+    background: $light_gray_brand_color;
+    padding: 20px 0;
+    .copyright {
+        font-family: 'Novecento Sans';
+        text-align: center;
+        color: $white_text;
+    }
+    .footer-sidebar {
+        margin-right: 40px;
+    }
+    .site-footer {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        h3 {
+            color: $orange_color;
+            font-size: 1.2rem;
+        }
+    }
+    .site-contact {
+        display: flex;
+        justify-content: space-between;
+        color: $white_text;
+        span {
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                a {
+                    color: $white_text;
+                }
+            }
+        }
+    }
+    .site-logo {
+        padding-top: 30px;
+        img {
+            max-width: 300px;
+        }
+    }
+}
+
+
+.read_more_btn {
+    padding: 10px 15px;
+    border: 1px solid black;
+    color: black;
+    &:hover {
+        @include hoverGreen;
+    }
+}
+
+.page-template-default:not(.home):not(.page-template-about) {
+    .site-content {
+        display: flex;
+        margin: 69px auto 0px auto;
+        width: 1120px;
+    }
+    .content-area {
+        padding-right: 2rem;
+        width: 72%;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    iframe {
+        border: 0;
+    }
+}
+
+.widget-area {
+    width: 30%;
+    padding-left: 3rem;
+    border-left: 1px solid $light_gray_brand_color;
+    .side-bar {
+        h3 {
+            font-size: 1.5rem;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: $green_brand_color;
+            font-family: 'Merriweather', serif;
+        }
+    }
+}
+
+//blog
+.blog {
+    .site-content {
+        display: flex;
+        margin: 69px auto 0px auto;
+        width: 1120px;
+    }
+    .content-area {
+        padding-right: 2rem;
+        width: 72%;
+    }
+    .main_posts {
+        margin: 0;
+        list-style: none;
+        .post_header {
+            position: relative;
+            .post_title {
+                position: absolute;
+                background: $green_brand_color;
+                color: $white_text;
+                font-size: 2rem;
+                width: 79%;
+                padding-left: 50px;
+                margin-top: 30px;
+                a {
+                    color: $white_text;
+                }
+            }
+            span {
+                position: absolute;
+                font-family: ' Novecento Sans', sans-serif;
+                bottom: 8px;
+                right: 0;
+                padding: 10px 20px;
+                font-size: 1.2rem;
+                background: $green_brand_color;
+                color: $white_text;
+            }
+        }
+        .post_content {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.single:not(.adventures-template-default) {
+    .site-content {
+        display: flex;
+        margin: 69px auto 0px auto;
+        width: 1120px;
+    }
+    .content-area {
+        padding-right: 2rem;
+        width: 72%;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .post {
+        .entry-header {
+            position: relative;
+            img {
+                width: 100%;
+            }
+            .entry-title {
+                position: absolute;
+                top: 0;
+                background: $green_brand_color;
+                color: $white_text;
+                font-size: 2rem;
+                width: 79%;
+                padding-left: 50px;
+                margin-top: 30px;
+            }
+            .entry-meta {
+                position: absolute;
+                font-family: ' Novecento Sans', sans-serif;
+                bottom: 8px;
+                right: 0;
+                padding: 2px 10px;
+                font-size: 1.2rem;
+                background: $green_brand_color;
+                color: $white_text;
+                a {
+                    color: $white_text;
+                }
+            }
+        }
+        .cat-links {
+            margin-right: 1rem;
+        }
+    }
+}
+
+//Search Result Page
+.search {
+    .site-content {
+        display: flex;
+        margin: 69px auto 0px auto;
+        width: 1120px;
+    }
+    .content-area {
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+        width: 72%;
+        article {
+            margin: 40px 0;
+        }
+    }
+    .page-title {
+        font-size: 3rem;
+        padding: 10px;
+        border-bottom: 1px solid $light_gray_brand_color;
+    }
+    .entry-title {
+        a {
+            color: $green_brand_color;
+            &:hover {
+                color: $black_text;
+            }
+        }
+        font-size: 2.4rem;
+    }
+}
+
+//searchbar 
+.search-form {
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        input {
+            padding: 5px 10px;
+            &::placeholder {
+                font-family: 'Merriweather';
+            }
+        }
+    }
 }

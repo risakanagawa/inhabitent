@@ -1,0 +1,60 @@
+/*--------------------------------------------------------------
+# Journal
+--------------------------------------------------------------*/
+
+.journal_page {
+    height: 600px;
+    width: 100%;
+}
+
+.journals {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.jounal_list {
+    border: 1px solid $light_gray_brand_color;
+    height: 400px;
+    flex: 0 1 32%;
+    position: relative;
+    img {
+        width: 100%;
+        height: 240px;
+        border-bottom: 5px solid $light_gray_brand_color;
+    }
+}
+
+.jounal_list_contents {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    span {
+        color: $medium_gray_brand_color;
+        font-size: .8rem;
+    }
+    .jounal_title {
+        font-size: 1.4rem;
+        padding-bottom: 10px;
+        color: $green_brand_color;
+        &:hover {
+            color: $black_text;
+        }
+    }
+}
+
+.read_entry_btn {
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 150px;
+    padding: 5px 10px;
+    color: $black_text;
+    border: 1px solid $black_text;
+    &:hover {
+        @include hoverGreen;
+    }
+}

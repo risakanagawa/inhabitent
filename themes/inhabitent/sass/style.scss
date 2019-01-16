@@ -1,5 +1,5 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: RED Starter Theme 
 Theme URI: http://underscores.me/
 Author: RED Academy
 Author URI: http://www.redacademy.com
@@ -43,6 +43,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 # Page Templates
 	## Front page
+		## Product
+# Pages
+	## Adventure
+	## Journal
 --------------------------------------------------------------*/
 
 // Imported but not included in the stylesheet.
@@ -62,4 +66,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "widgets";
 @import "content";
 @import "media";
+@import "shop";
+@import "adventures";
+@import "product";
+@import "journal";
 @import "page-templates";

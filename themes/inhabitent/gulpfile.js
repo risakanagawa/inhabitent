@@ -12,7 +12,7 @@ const babel = require('gulp-babel');
 
 // Create basic Gulp tasks
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
   return gulp
     .src('./sass/style.scss', { sourcemaps: true })
     .pipe(sourcemaps.init())
@@ -30,7 +30,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task('lint', function() {
+gulp.task('lint', function () {
   return gulp
     .src(['./js/*.js'])
     .pipe(prettyError())
@@ -41,7 +41,7 @@ gulp.task('lint', function() {
 
 gulp.task(
   'scripts',
-  gulp.series('lint', function() {
+  gulp.series('lint', function () {
     return gulp
       .src('./js/*.js')
       .pipe(
@@ -70,7 +70,7 @@ gulp.task('browser-sync', function() {
   ];
 
   browserSync.init(files, {
-    proxy: 'localhost[:port-here]/[your-dir-name-here]'
+    proxy: 'localhost:8888/inhabitent'
   });
 
   gulp.watch(files).on('change', browserSync.reload);
@@ -82,3 +82,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', gulp.parallel('browser-sync', 'watch'));
+

@@ -23,7 +23,10 @@ add_filter( 'body_class', 'red_starter_body_classes' );
 
 function replace_logo() {
 	echo '<style type="text/css">                                                                   
-	h1 a { background-image:url('.get_stylesheet_directory_uri().'/images/logos/inhabitent-logo-full.svg) !important; }                            
+	h1 a{background: url(https://tent.academy.red/wp-content/themes/inhabitent/images/inhabitent-logo-text-dark.svg) no-repeat !important;
+    background-size: 300px 53px !important;
+    width: 300px !important;
+    height: 53px !important;}                       
 </style>';
 }
 add_action('login_head', 'replace_logo');

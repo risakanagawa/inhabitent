@@ -5,128 +5,203 @@
 /* Links */
 
 a {
-	color: $color__link;
-
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+    color: $color__link;
+    // &:visited {
+    //     color: $color__link-visited;
+    // }
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color__link-hover;
+    }
+    &:focus {
+        outline: thin dotted;
+    }
+    &:hover,
+    &:active {
+        outline: 0;
+        color: $yellow_color;
+    }
 }
 
 /* Menus */
 
+.site-branding {
+    width: 50px;
+}
+
+
+.site-header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.6);
+    border-bottom: #e1e1e1 1px solid;
+    .logo_svg {
+        background: url('../../images/logos/inhabitent-logo-tent.svg') no-repeat;
+         background-size: 50px 33px;
+         height: 33px;
+    }
+     a {
+        color: $green_brand_color !important;
+     }
+     &.site-header {
+        position: absolute;
+        width: 100vw;
+        z-index: 10;
+        background-color: transparent;
+        border: none;
+        .logo_svg {
+            background: url('../../images/logos/inhabitent-logo-tent-white.svg') no-repeat;
+             background-size: 50px 33px;
+             height: 33px;
+        }
+        a {
+            color: $white_text !important;
+            &:hover {
+                color: $yellow_color  !important;
+            }
+         }
+        }
+     .header_nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+     }
+  }
+
+
+
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    ul {
+        display: none;
+        list-style: none;
+        margin: 0;
 		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
-
-			ul {
-				left: -999rem;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
+		li {
+			padding-right: 30px;
+		}
+        ul {
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            float: left;
+            position: absolute;
+            top: $base__space-unit;
+            left: -999rem;
+            z-index: 99999;
+            ul {
+                left: -999rem;
+                top: 0;
+            }
+            li {
+				
+                &:hover>ul,
+                &.focus>ul {
+                    left: 100%;
+                }
+            }
+            a {
 				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-	a {
-		display: block;
+            }
+            :hover>a,
+            .focus>a {}
+            a:hover,
+            a.focus {}
+        }
+        li:hover>ul,
+        li.focus>ul {
+            left: auto;
+        }
+    }
+    li {
+        float: left;
+        position: relative;
+        &:hover>a,
+        &.focus>a {}
+    }
+    a {
+        display: block;
 		text-decoration: none;
-	}
+		color: $white_text;
+		font-size: 16px;
+    }
+    .current_page_item>a,
+    .current-menu-item>a,
+    .current_page_ancestor>a {}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
+    i {
+        color: $white_text;
+    }
+}
+
+.header-search {
+    .search-form {
+        label {
+            float: left;
+        }
+        input {
+            display: none;
+            background: none;
+            border: 0;
+            background: transparent;
+            font-family: Novecento Sans Web,sans-serif;
+            margin-left: .75rem;
+            padding: 0 .3rem;
+            text-transform: uppercase;
+        }
+        // input[type=search] {
+        //     width: 0px;
+        //     -webkit-transition: width 0.4s ease-in;
+        //   }
+        // input[type=search]:focus {
+            
+        //   }
+        .switch {
+            float: left;
+        }
+        .open {
+            display: block;
+            overflow: hidden;
+            width: 60%;
+        }
+    }
 }
 
 /* Small menu. */
+
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+    display: block;
 }
 
 @media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+    .menu-toggle {
+        display: none;
+    }
+    .main-navigation ul {
+        display: block;
+    }
 }
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
-	.site-main & {
-		margin: 0 0 $base__space-unit;
-		overflow: hidden;
-	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
+    .site-main & {
+        margin: 0 0 $base__space-unit;
+        overflow: hidden;
+    }
+    .nav-previous {
+        float: left;
+        width: 50%;
+    }
+    .nav-next {
+        float: right;
+        text-align: right;
+        width: 50%;
+    }
 }
+

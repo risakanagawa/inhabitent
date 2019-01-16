@@ -6,7 +6,10 @@ html {
 
 body {
 	margin: 0;
+	font-family: 'Merriweather';
 }
+
+
 
 article,
 aside,
@@ -20,6 +23,7 @@ menu,
 nav,
 section,
 summary {
+	font-family: 'Merriweather';
 	display: block;
 }
 
@@ -42,6 +46,7 @@ template {
 }
 
 a {
+    font-family: 'Novecento Sans';
 	background-color: transparent;
 }
 

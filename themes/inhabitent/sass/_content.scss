@@ -4,46 +4,143 @@
 
 /* Posts and pages */
 
+//hello
 .sticky {
-	display: block;
+    display: block;
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+    margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
-	display: none;
+.updated:not(.published) {
+    display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+    display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $base__space-unit 0 0;
+    margin: $base__space-unit 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
+    clear: both;
+    margin: 0 0 $base__space-unit;
+}
+
+.adventures-template-default {
+    .site-content {
+		margin-bottom: 50px;
+		.adventure-image {
+			width: 100%;
+		}
+		.adventure-description {
+			width: 1120px;
+			margin: 0 auto;
+			width: 56%;
+			h2 {
+				font-size: 3rem;
+				line-height: 1.25;
+				margin-top: 40px;
+				margin-bottom: 0px;
+			}
+			span {
+				font-family: 'Novecento Sans',sans-serif;
+				font-size: 1.2rem;
+				text-transform: uppercase;
+			}
+		}
+    }
 }
 
 /* Asides */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+    display: none;
 }
 
 /* Comments */
 
 .comment-content a {
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
+
+//comments 
+.comments-area {
+    ol {
+        margin: 0;
+        padding: 0;
+    }
+    .comment-list>li {
+        border-bottom: 1px solid #e1e1e1;
+    }
+    .comment {
+        article {
+            padding: 20px 0;
+        }
+        .comment-body {
+            display: flex;
+        }
+        .children li {
+            border-top: 1px solid #e1e1e1;
+        }
+        .comment-meta {
+            .comment-author {
+                font-style: normal;
+                font-weight: bold;
+            }
+            .comment-metadata {
+                color: gray;
+            }
+        }
+        .comment-author-avatar {
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+            margin-right: 1rem;
+        }
+        a {
+            color: #248a83;
+            text-decoration: none;
+        }
+    }
+}
+
+.comment-respond {
+    .comment-reply-title {
+        font-size: 2rem;
+    }
+    .comment-form-author {
+        width: 49%;
+        float: left;
+        margin-right: 10px;
+        input {
+            width: 100%;
+        }
+    }
+    .comment-form-email {
+        width: 49%;
+        float: left;
+        input {
+            width: 100%;
+        }
+    }
+    .comment-form-url {
+        width: 100%;
+        clear: left;
+        input {
+            width: 100%;
+        }
+    }
+}
+
+
 .bypostauthor {
-	display: block;
+    display: block;
 }

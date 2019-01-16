@@ -3,3 +3,75 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+.home {
+    .frontpage {
+        padding-top: 0;
+        height: 100vh;
+        @include flex-center;
+        h1 {
+            color: #fff;
+            font-size: 3rem;
+        }
+        img {
+            width: 35vh;
+            height: 35vh;
+        }
+    }
+}
+
+.page-template-about {
+    .entry-header.hero-image-header {
+        height: 100vh;
+        h1 {
+            color: #fff;
+        }
+    }
+    .about-page {
+        margin-bottom: 50px;
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+        }
+        p {
+            width: 800px;
+            margin: 10px auto;
+        }
+    }
+}
+
+//404
+.error404 {
+    
+    .site-content {
+        display: flex;
+        margin: 69px auto 0px auto;
+        width: 1120px;
+    }
+    .content-area {
+        padding-right: 2rem;
+        width: 72%;
+        padding-bottom: 3rem;
+        .search-form {
+            fieldset {
+                button {
+                    display: none;
+                }
+            }
+        }
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .widget {
+        margin-bottom: 50px;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            a {
+                color: #248A83;
+            }
+        }
+    }
+}

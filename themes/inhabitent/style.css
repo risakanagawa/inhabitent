@@ -1,5 +1,5 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: RED Starter Theme 
 Theme URI: http://underscores.me/
 Author: RED Academy
 Author URI: http://www.redacademy.com
@@ -42,6 +42,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 # Page Templates
 	## Front page
+		## Product
+# Pages
+	## Adventure
+	## Journal
 --------------------------------------------------------------*/
 html {
   font-family: sans-serif;
@@ -49,7 +53,8 @@ html {
   -ms-text-size-adjust: 100%; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Merriweather'; }
 
 article,
 aside,
@@ -63,6 +68,7 @@ menu,
 nav,
 section,
 summary {
+  font-family: 'Merriweather';
   display: block; }
 
 audio,
@@ -81,6 +87,7 @@ template {
   display: none; }
 
 a {
+  font-family: 'Novecento Sans';
   background-color: transparent; }
 
 a:active,
@@ -225,6 +232,48 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Novecento Sans';
+  src: url("../fonts/2f51200b292e098f773415b308557f06.eot");
+  src: url("../fonts/2f51200b292e098f773415b308557f06.eot?#iefix") format("embedded-opentype"), url("../fonts/2f51200b292e098f773415b308557f06.woff2") format("woff2"), url("../fonts/2f51200b292e098f773415b308557f06.woff") format("woff"), url("../fonts/2f51200b292e098f773415b308557f06.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../fonts/Merriweather-BoldItalic.eot");
+  src: url("../fonts/Merriweather-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Merriweather-BoldItalic.woff2") format("woff2"), url("../fonts/Merriweather-BoldItalic.woff") format("woff"), url("../fonts/Merriweather-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../fonts/Merriweather-Light.eot");
+  src: url("../fonts/Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Merriweather-Light.woff2") format("woff2"), url("../fonts/Merriweather-Light.woff") format("woff"), url("../fonts/Merriweather-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../fonts/Merriweather-Bold.eot");
+  src: url("../fonts/Merriweather-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Merriweather-Bold.woff2") format("woff2"), url("../fonts/Merriweather-Bold.woff") format("woff"), url("../fonts/Merriweather-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Novecento Sans';
+  src: url("../fonts/72c41ebf003ffec40a2ef926b26174ed.eot");
+  src: url("../fonts/72c41ebf003ffec40a2ef926b26174ed.eot?#iefix") format("embedded-opentype"), url("../fonts/72c41ebf003ffec40a2ef926b26174ed.woff2") format("woff2"), url("../fonts/72c41ebf003ffec40a2ef926b26174ed.woff") format("woff"), url("../fonts/72c41ebf003ffec40a2ef926b26174ed.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../fonts/Merriweather-LightItalic.eot");
+  src: url("../fonts/Merriweather-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Merriweather-LightItalic.woff2") format("woff2"), url("../fonts/Merriweather-LightItalic.woff") format("woff"), url("../fonts/Merriweather-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -301,7 +350,23 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  line-height: 1.75;
+  font-family: 'Merriweather', serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Novecento Sans', sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.25; }
+
+a {
+  text-decoration: none; }
+  a:visited {
+    color: #000; }
 
 blockquote,
 q {
@@ -348,6 +413,234 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+.container {
+  max-width: 1120px;
+  margin: 0 auto; }
+
+.heading_2 {
+  padding: 30px 0;
+  font-size: 3rem;
+  font-weight: initial;
+  text-align: center; }
+
+.like-icons button {
+  background: #fff;
+  color: #000;
+  border: #000 1px solid;
+  border-radius: 0;
+  padding: 15px 30px;
+  font-size: .8rem; }
+  .like-icons button:hover {
+    color: #fff;
+    background: #248A83;
+    border-color: #248A83;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-shadow: none; }
+
+.footer {
+  height: 300px;
+  background: #a1a1a1;
+  padding: 20px 0; }
+  .footer .copyright {
+    font-family: 'Novecento Sans';
+    text-align: center;
+    color: #fff; }
+  .footer .footer-sidebar {
+    margin-right: 40px; }
+  .footer .site-footer {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .footer .site-footer h3 {
+      color: #d99054;
+      font-size: 1.2rem; }
+  .footer .site-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: #fff; }
+    .footer .site-contact span {
+      font-weight: bold; }
+    .footer .site-contact ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0; }
+      .footer .site-contact ul li {
+        display: inline-block;
+        margin-right: 10px; }
+        .footer .site-contact ul li a {
+          color: #fff; }
+  .footer .site-logo {
+    padding-top: 30px; }
+    .footer .site-logo img {
+      max-width: 300px; }
+
+.read_more_btn {
+  padding: 10px 15px;
+  border: 1px solid black;
+  color: black; }
+  .read_more_btn:hover {
+    color: #fff;
+    background: #248A83;
+    border-color: #248A83; }
+
+.page-template-default:not(.home):not(.page-template-about) .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 69px auto 0px auto;
+  width: 1120px; }
+
+.page-template-default:not(.home):not(.page-template-about) .content-area {
+  padding-right: 2rem;
+  width: 72%; }
+
+.page-template-default:not(.home):not(.page-template-about) h2 {
+  font-size: 2rem; }
+
+.page-template-default:not(.home):not(.page-template-about) iframe {
+  border: 0; }
+
+.widget-area {
+  width: 30%;
+  padding-left: 3rem;
+  border-left: 1px solid #a1a1a1; }
+  .widget-area .side-bar h3 {
+    font-size: 1.5rem; }
+  .widget-area .side-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .widget-area .side-bar a {
+    color: #248A83;
+    font-family: 'Merriweather', serif; }
+
+.blog .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 69px auto 0px auto;
+  width: 1120px; }
+
+.blog .content-area {
+  padding-right: 2rem;
+  width: 72%; }
+
+.blog .main_posts {
+  margin: 0;
+  list-style: none; }
+  .blog .main_posts .post_header {
+    position: relative; }
+    .blog .main_posts .post_header .post_title {
+      position: absolute;
+      background: #248A83;
+      color: #fff;
+      font-size: 2rem;
+      width: 79%;
+      padding-left: 50px;
+      margin-top: 30px; }
+      .blog .main_posts .post_header .post_title a {
+        color: #fff; }
+    .blog .main_posts .post_header span {
+      position: absolute;
+      font-family: ' Novecento Sans', sans-serif;
+      bottom: 8px;
+      right: 0;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background: #248A83;
+      color: #fff; }
+  .blog .main_posts .post_content {
+    margin-bottom: 50px; }
+
+.single:not(.adventures-template-default) .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 69px auto 0px auto;
+  width: 1120px; }
+
+.single:not(.adventures-template-default) .content-area {
+  padding-right: 2rem;
+  width: 72%; }
+
+.single:not(.adventures-template-default) h2 {
+  font-size: 1.6rem; }
+
+.single:not(.adventures-template-default) .post .entry-header {
+  position: relative; }
+  .single:not(.adventures-template-default) .post .entry-header img {
+    width: 100%; }
+  .single:not(.adventures-template-default) .post .entry-header .entry-title {
+    position: absolute;
+    top: 0;
+    background: #248A83;
+    color: #fff;
+    font-size: 2rem;
+    width: 79%;
+    padding-left: 50px;
+    margin-top: 30px; }
+  .single:not(.adventures-template-default) .post .entry-header .entry-meta {
+    position: absolute;
+    font-family: ' Novecento Sans', sans-serif;
+    bottom: 8px;
+    right: 0;
+    padding: 2px 10px;
+    font-size: 1.2rem;
+    background: #248A83;
+    color: #fff; }
+    .single:not(.adventures-template-default) .post .entry-header .entry-meta a {
+      color: #fff; }
+
+.single:not(.adventures-template-default) .post .cat-links {
+  margin-right: 1rem; }
+
+.search .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 69px auto 0px auto;
+  width: 1120px; }
+
+.search .content-area {
+  padding-right: 2rem;
+  padding-bottom: 3rem;
+  width: 72%; }
+  .search .content-area article {
+    margin: 40px 0; }
+
+.search .page-title {
+  font-size: 3rem;
+  padding: 10px;
+  border-bottom: 1px solid #a1a1a1; }
+
+.search .entry-title {
+  font-size: 2.4rem; }
+  .search .entry-title a {
+    color: #248A83; }
+    .search .entry-title a:hover {
+      color: #000; }
+
+.search-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+  .search-form fieldset input {
+    padding: 5px 10px; }
+    .search-form fieldset input::-webkit-input-placeholder {
+      font-family: 'Merriweather'; }
+    .search-form fieldset input::-ms-input-placeholder {
+      font-family: 'Merriweather'; }
+    .search-form fieldset input::placeholder {
+      font-family: 'Merriweather'; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -356,25 +649,22 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 0;
+  background: #248a83;
+  color: #fff;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+    background: #19625d; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -387,6 +677,12 @@ input[type="submit"] {
             box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
 /* Fields */
+label {
+  font-size: 1.2rem;
+  font-family: 'Novecento Sans',sans-serif; }
+  label span {
+    color: #d99054; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -395,7 +691,7 @@ input[type="search"],
 textarea {
   color: #666;
   border: 1px solid #ccc;
-  border-radius: 3px; }
+  background: #f4f4f4; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -409,7 +705,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: 1rem; }
 
 textarea {
   padding-left: 3px;
@@ -421,26 +717,72 @@ textarea {
 /* Links */
 a {
   color: royalblue; }
-  a:visited {
-    color: purple; }
   a:hover, a:focus, a:active {
     color: midnightblue; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
-    outline: 0; }
+    outline: 0;
+    color: #f0e4d1; }
 
 /* Menus */
+.site-branding {
+  width: 50px; }
+
+.site-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: #e1e1e1 1px solid; }
+  .site-header-fixed .logo_svg {
+    background: url("../../images/logos/inhabitent-logo-tent.svg") no-repeat;
+    background-size: 50px 33px;
+    height: 33px; }
+  .site-header-fixed a {
+    color: #248A83 !important; }
+  .site-header-fixed.site-header {
+    position: absolute;
+    width: 100vw;
+    z-index: 10;
+    background-color: transparent;
+    border: none; }
+    .site-header-fixed.site-header .logo_svg {
+      background: url("../../images/logos/inhabitent-logo-tent-white.svg") no-repeat;
+      background-size: 50px 33px;
+      height: 33px; }
+    .site-header-fixed.site-header a {
+      color: #fff !important; }
+      .site-header-fixed.site-header a:hover {
+        color: #f0e4d1 !important; }
+  .site-header-fixed .header_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .main-navigation ul {
     display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
+    .main-navigation ul li {
+      padding-right: 30px; }
     .main-navigation ul ul {
       -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
               box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -465,7 +807,32 @@ a {
     position: relative; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px; }
+  .main-navigation i {
+    color: #fff; }
+
+.header-search .search-form label {
+  float: left; }
+
+.header-search .search-form input {
+  display: none;
+  background: none;
+  border: 0;
+  background: transparent;
+  font-family: Novecento Sans Web,sans-serif;
+  margin-left: .75rem;
+  padding: 0 .3rem;
+  text-transform: uppercase; }
+
+.header-search .search-form .switch {
+  float: left; }
+
+.header-search .search-form .open {
+  display: block;
+  overflow: hidden;
+  width: 60%; }
 
 /* Small menu. */
 .menu-toggle,
@@ -594,6 +961,24 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
+.adventures-template-default .site-content {
+  margin-bottom: 50px; }
+  .adventures-template-default .site-content .adventure-image {
+    width: 100%; }
+  .adventures-template-default .site-content .adventure-description {
+    width: 1120px;
+    margin: 0 auto;
+    width: 56%; }
+    .adventures-template-default .site-content .adventure-description h2 {
+      font-size: 3rem;
+      line-height: 1.25;
+      margin-top: 40px;
+      margin-bottom: 0px; }
+    .adventures-template-default .site-content .adventure-description span {
+      font-family: 'Novecento Sans',sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase; }
+
 /* Asides */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
@@ -602,6 +987,63 @@ a {
 /* Comments */
 .comment-content a {
   word-wrap: break-word; }
+
+.comments-area ol {
+  margin: 0;
+  padding: 0; }
+
+.comments-area .comment-list > li {
+  border-bottom: 1px solid #e1e1e1; }
+
+.comments-area .comment article {
+  padding: 20px 0; }
+
+.comments-area .comment .comment-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.comments-area .comment .children li {
+  border-top: 1px solid #e1e1e1; }
+
+.comments-area .comment .comment-meta .comment-author {
+  font-style: normal;
+  font-weight: bold; }
+
+.comments-area .comment .comment-meta .comment-metadata {
+  color: gray; }
+
+.comments-area .comment .comment-author-avatar {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin-right: 1rem; }
+
+.comments-area .comment a {
+  color: #248a83;
+  text-decoration: none; }
+
+.comment-respond .comment-reply-title {
+  font-size: 2rem; }
+
+.comment-respond .comment-form-author {
+  width: 49%;
+  float: left;
+  margin-right: 10px; }
+  .comment-respond .comment-form-author input {
+    width: 100%; }
+
+.comment-respond .comment-form-email {
+  width: 49%;
+  float: left; }
+  .comment-respond .comment-form-email input {
+    width: 100%; }
+
+.comment-respond .comment-form-url {
+  width: 100%;
+  clear: left; }
+  .comment-respond .comment-form-url input {
+    width: 100%; }
 
 .bypostauthor {
   display: block; }
@@ -666,7 +1108,360 @@ object {
 .gallery-caption {
   display: block; }
 
+.shop_page {
+  margin: 70px 0; }
+
+.shop_header {
+  margin-top: 100px;
+  height: 200px;
+  text-align: center;
+  width: 1120px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-bottom: 1px dashed #c8c8c8; }
+  .shop_header h1 {
+    font-size: 2.5rem; }
+
+.shop_links ul {
+  margin-left: 0;
+  padding-left: 0;
+  margin: 0 auto; }
+
+.shop_links li {
+  display: inline-block;
+  margin: 0 10px;
+  list-style: none;
+  font-size: 1.5rem; }
+  .shop_links li a {
+    color: #248A83; }
+
+.items_wrapper {
+  display: grid;
+  max-width: 1120px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 0 auto; }
+
+.item {
+  border: 1px solid #e1e1e1;
+  text-align: center; }
+  .item p {
+    margin: 0;
+    padding: 10px 0; }
+  .item span {
+    font-size: 0.9rem; }
+  .item img {
+    max-width: 100%;
+    height: 250px;
+    border-bottom: 5px solid #e1e1e1; }
+
+/*--------------------------------------------------------------
+# Adventures
+--------------------------------------------------------------*/
+.adventures {
+  height: 800px; }
+
+.more-adventure {
+  margin: 30px 0; }
+
+.adventure_link {
+  margin: 10px 0;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  color: #fff;
+  background: #248A83;
+  border-color: #248A83; }
+  .adventure_link:hover {
+    background: #248A83;
+    border: none; }
+
+.adventure_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  height: 500px; }
+  .adventure_grid .adventure_list {
+    position: relative; }
+    .adventure_grid .adventure_list:first-child {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2; }
+      .adventure_grid .adventure_list:first-child .adventure_title {
+        font-size: 3rem; }
+    .adventure_grid .adventure_list:nth-child(2) {
+      grid-column: 3 / span 2;
+      grid-row: 1 / span 1; }
+      .adventure_grid .adventure_list:nth-child(2) .adventure_title {
+        font-size: 2rem; }
+    .adventure_grid .adventure_list:nth-child(3) {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3; }
+      .adventure_grid .adventure_list:nth-child(3) .adventure_title {
+        font-size: 1.5rem; }
+    .adventure_grid .adventure_list:last-child {
+      grid-column: 4 / 5;
+      grid-row: 2 / 3; }
+      .adventure_grid .adventure_list:last-child .adventure_title {
+        font-size: 1.5rem; }
+    .adventure_grid .adventure_list img {
+      overflow: hidden; }
+    .adventure_grid .adventure_list .adventure_info {
+      position: absolute;
+      top: 20px;
+      left: 30px; }
+    .adventure_grid .adventure_list .adventure_title {
+      widows: 140px;
+      color: #fff;
+      font-weight: normal;
+      font-family: 'Merriweather', serif; }
+    .adventure_grid .adventure_list .read_btn {
+      padding: 10px 20px;
+      border: 1px solid #fff;
+      color: #fff; }
+      .adventure_grid .adventure_list .read_btn:hover {
+        color: #fff;
+        background: #248A83;
+        border-color: #248A83; }
+
+.adventure_archive_page {
+  height: 1400px; }
+  .adventure_archive_page .adventure_header {
+    margin: 70px auto;
+    border-bottom: #a1a1a1 dotted 1px;
+    width: 1120px;
+    text-align: center; }
+    .adventure_archive_page .adventure_header h1 {
+      font-size: 2.5rem; }
+  .adventure_archive_page .adventures_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    height: 1200px; }
+    .adventure_archive_page .adventures_wrapper .adventure_title {
+      font-size: 3rem; }
+    .adventure_archive_page .adventures_wrapper .adventure_list {
+      position: relative; }
+      .adventure_archive_page .adventures_wrapper .adventure_list:first-child {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1; }
+      .adventure_archive_page .adventures_wrapper .adventure_list:nth-child(2) {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1; }
+      .adventure_archive_page .adventures_wrapper .adventure_list:nth-child(3) {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1; }
+      .adventure_archive_page .adventures_wrapper .adventure_list:last-child {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1; }
+      .adventure_archive_page .adventures_wrapper .adventure_list img {
+        overflow: hidden; }
+      .adventure_archive_page .adventures_wrapper .adventure_list .adventure_info {
+        position: absolute;
+        top: 20px;
+        left: 30px; }
+      .adventure_archive_page .adventures_wrapper .adventure_list .adventure_title {
+        widows: 140px;
+        color: #fff;
+        font-weight: normal;
+        font-family: 'Merriweather', serif; }
+      .adventure_archive_page .adventures_wrapper .adventure_list .read_btn {
+        padding: 10px 20px;
+        border: 1px solid #fff;
+        color: #fff; }
+        .adventure_archive_page .adventures_wrapper .adventure_list .read_btn:hover {
+          color: #fff;
+          background: #248A83;
+          border-color: #248A83; }
+
+/*--------------------------------------------------------------
+# product - front-page
+--------------------------------------------------------------*/
+.product_page {
+  padding-top: 30px;
+  height: 550px;
+  text-align: center; }
+
+.product_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center; }
+
+.product_wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #a1a1a1;
+  border-top-width: 5px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 24%;
+          flex: 0 1 24%;
+  height: 280px;
+  padding: 12px; }
+  .product_wrapper:hover {
+    border-color: #d99054; }
+  .product_wrapper img {
+    width: 80px;
+    height: 80px; }
+  .product_wrapper p {
+    height: 70px; }
+  .product_wrapper a {
+    padding: 10px 15px;
+    color: #fff;
+    background: #248A83; }
+
+.product {
+  width: 1120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 100px auto; }
+  .product .product-image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 46%;
+            flex: 0 1 46%; }
+  .product .product-description {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 49%;
+            flex: 0 1 49%; }
+  .product h2 {
+    color: #d99054;
+    font-size: 2.5rem;
+    margin: 0; }
+  .product p {
+    margin: 10px 0; }
+  .product span {
+    font-family: ' Novecento Sans', sans-serif;
+    font-size: 1.5rem; }
+
+/*--------------------------------------------------------------
+# Journal
+--------------------------------------------------------------*/
+.journal_page {
+  height: 600px;
+  width: 100%; }
+
+.journals {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 0; }
+
+.jounal_list {
+  border: 1px solid #a1a1a1;
+  height: 400px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 32%;
+          flex: 0 1 32%;
+  position: relative; }
+  .jounal_list img {
+    width: 100%;
+    height: 240px;
+    border-bottom: 5px solid #a1a1a1; }
+
+.jounal_list_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 10px; }
+  .jounal_list_contents span {
+    color: #808080;
+    font-size: .8rem; }
+  .jounal_list_contents .jounal_title {
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+    color: #248A83; }
+    .jounal_list_contents .jounal_title:hover {
+      color: #000; }
+
+.read_entry_btn {
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+  width: 150px;
+  padding: 5px 10px;
+  color: #000;
+  border: 1px solid #000; }
+  .read_entry_btn:hover {
+    color: #fff;
+    background: #248A83;
+    border-color: #248A83; }
+
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.home .frontpage {
+  padding-top: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .home .frontpage h1 {
+    color: #fff;
+    font-size: 3rem; }
+  .home .frontpage img {
+    width: 35vh;
+    height: 35vh; }
+
+.page-template-about .entry-header.hero-image-header {
+  height: 100vh; }
+  .page-template-about .entry-header.hero-image-header h1 {
+    color: #fff; }
+
+.page-template-about .about-page {
+  margin-bottom: 50px; }
+  .page-template-about .about-page h2 {
+    font-size: 2rem;
+    text-align: center; }
+  .page-template-about .about-page p {
+    width: 800px;
+    margin: 10px auto; }
+
+.error404 .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 69px auto 0px auto;
+  width: 1120px; }
+
+.error404 .content-area {
+  padding-right: 2rem;
+  width: 72%;
+  padding-bottom: 3rem; }
+  .error404 .content-area .search-form fieldset button {
+    display: none; }
+
+.error404 h2 {
+  font-size: 1.6rem; }
+
+.error404 .widget {
+  margin-bottom: 50px; }
+  .error404 .widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .error404 .widget ul a {
+      color: #248A83; }

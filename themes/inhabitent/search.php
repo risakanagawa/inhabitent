@@ -20,7 +20,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'search' ); ?>
-
+				<a href="<?php the_permalink();?>" class="read_more_btn">READ MORE →</a>
 			<?php endwhile; ?>
 
 			<?php red_starter_numbered_pagination(); ?>
