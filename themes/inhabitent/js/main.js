@@ -39,12 +39,6 @@
 
   //Document On Load
   $(window).on('load', function() {
-    // const headerSwitch = document.getElementById('switch');
-    // headerSwitch.onclick = function() {
-    //   $('#search-bar').toggleClass('open')
-    //                   .css('transition', 'width 0.4s ease-in')
-
-    // };
 
     const homeHero = document.getElementById('hero-page');
     const aboutHero = document.getElementById('about-hero');
@@ -61,6 +55,4 @@
   $(window).on('scroll', function() {
     inhabitant.HeaderFixed();
   });
-
-
 })(jQuery);
